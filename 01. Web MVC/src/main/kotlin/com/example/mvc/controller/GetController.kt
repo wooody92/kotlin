@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 class GetController {
 
     /**
-     * REQUEST MAPPING - 1
+     * GET MAPPING - 1
      */
     @GetMapping("/get1")
     fun hello(): String {
@@ -16,7 +16,7 @@ class GetController {
     }
 
     /**
-     * REQUEST MAPPING - 2
+     * REQUEST MAPPING - 1
      */
     @RequestMapping(method = [RequestMethod.GET], path = ["/get2", "/get3"])
     fun requestMapping(): String {
@@ -53,7 +53,7 @@ class GetController {
 
     /**
      * QUERY PARAMETER - 2
-     * 1. @RestController로 선언하면 objectMapper에 의해 응답 객체가 json 형태로 변환된다.
+     * 1. @RestController로 선언하면 object mapper에 의해 응답 객체가 json 형태로 변환된다.
      * 2. phone-number와 같이 하이픈이 포함된 uri는 객체 이름으로 선언할 수 없으므로, @RequestParam(value = "phone-number") 또는 아래의 map 방식으로 처리 가능하다.
      */
     @GetMapping("/get7")
