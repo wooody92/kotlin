@@ -47,7 +47,7 @@ class ValidationController {
      * object 단일 검증 시에는 @Valid를 이용하고, object 내부 필드에 조건을 적용한다.
      * @Valid의 결과를 bindingResult로 담아 받을 수 있다.
      */
-    @PostMapping
+    @PostMapping("/validate")
     fun validation2(@Valid @RequestBody validationRequest: ValidationRequest, bindingResult: BindingResult): ResponseEntity<String> {
 
         if (bindingResult.hasErrors()) {
