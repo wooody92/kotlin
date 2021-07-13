@@ -4,6 +4,9 @@ import com.example.todo.model.http.TodoDto
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
+/**
+ * value? = null 설정으로 매개변수가 없는 기본 생성자를 가져간다.
+ */
 data class Todo(
         var index: Int? = null,                 // 일정 index
         var title: String? = null,              // 일정 타이틀
