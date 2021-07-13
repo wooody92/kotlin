@@ -75,6 +75,7 @@ class TodoRepositoryImpl : TodoRepository {
      * nullable return
      */
     override fun findOne(index: Int): Todo? {
+        // TODO : 존재하지 않는 index 조회 시 error 처리
         // filter{ it.index == index }.first()
         return todoDataBase.todoList.first { it.index == index }
     }
