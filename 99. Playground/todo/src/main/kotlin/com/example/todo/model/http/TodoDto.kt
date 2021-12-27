@@ -67,6 +67,7 @@ data class TodoDto(
     }
 }
 
+// 객체를 두 번 만드는 꼴
 fun TodoDto.entityToDto(todo: Todo): TodoDto {
     return TodoDto().apply {
         this.index = todo.index
