@@ -11,6 +11,6 @@ class CoroutineController(
 
     @GetMapping("/ping")
     fun hello(): String {
-        return coroutineService.main()
+        return coroutineService.run()
     }
 }

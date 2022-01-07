@@ -10,7 +10,7 @@ class CoroutineService {
     fun log(message: String) =
         println("time : ${LocalDateTime.now()} / working thread : ${Thread.currentThread()} / log : ${message}")
 
-    fun main(): String {
+    fun run(): String {
         log("start main()")
 
         launch()
@@ -22,10 +22,12 @@ class CoroutineService {
     }
 
     fun launch() {
-        runBlocking {
-            GlobalScope.launch { sleep1() }
-            GlobalScope.launch { sleep2() }
-        }
+//        runBlocking {
+//            launch {
+//                sleep1()
+//                sleep2()
+//            }
+//        }
         GlobalScope.launch { thread1() }
         GlobalScope.launch(Dispatchers.Unconfined) { thread1() }
         GlobalScope.launch(Dispatchers.Default) { thread1() }
