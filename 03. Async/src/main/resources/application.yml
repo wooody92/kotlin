@@ -1,0 +1,10 @@
+spring:
+  task:
+    execution:
+      pool:
+        allow-core-thread-timeout: true # Whether core threads are allowed to time out. This enables dynamic growing and shrinking of the pool.
+        core-size: 300 # 기본적으로 실행을 대기하고 있는 thread 갯수
+        keep-alive: 60s # Time limit for which threads may remain idle before being terminated.
+        max-size: 1000 # 동시 동작하는 최대 thread 갯수
+        queue-capacity: 100 # 동시에 동작하는 thread 갯수가 maxPoolSize 초과되는 요청 시, queue에 저장 후 순차적으로 실행
+      thread-name-prefix: demo- # spring이 생성하는 thread prefix

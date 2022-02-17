@@ -15,6 +15,7 @@ class PageController {
     @GetMapping("/main")
     fun main(): String {
         println("init main")
+        println()
         return "main.html"
     }
 
